@@ -4,9 +4,18 @@
         <title>Document</title>
         <script>
             window.onload = function () {
-                alert("hhh");
-                const name = document.getElementById("elements");
-                name.innerHTML = "hello";
+                function canNest(arr1, arr2) {
+                    if (Math.min(...arr1) > Math.min(...arr2) && Math.max(...arr1) < Math.max(...arr2)) {
+                        return "True";
+                    } else {
+                        return "False";
+                    }
+                }
+
+                let arr1 = [1, 2, 3, 4];
+                let arr2 = [0, 6];
+
+                alert(`arr1: ${arr1} arr2: ${arr2} \n${canNest(arr1, arr2)}`);
             };
         </script>
     </head>
